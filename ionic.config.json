@@ -1,0 +1,7 @@
+{
+  "name": "signatuarepadionic",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
