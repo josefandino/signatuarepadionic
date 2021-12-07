@@ -1,17 +1,54 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Firma digital
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<div class="signature">
+  
+<div class="foto centrarv">
+  <img src="../../../../assets/svg/firma.svg">
+  <h3>Firma digital</h3>
+</div>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<!-- <div class="container">
+  <ion-button (click)="onClick()" shape="round">
+    Agregar firma digital
+  </ion-button>
+  
+</div> -->
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
-</ion-content>
+<div class="firma">
+  
+  <div class="canvas">
+    
+    <div class="firmaimg" *ngIf="firmaImg">
+      <img [src]="firma" >
+    </div>
+    
+    <canvas #canvas 
+    (touchstart)="startDrawing($event)" 
+    (touchmove)="moved($event)"></canvas>
+  </div>
+  
+  <div class="btnsFirma">
+    <div class="btnAdd" (click)="clearPad()">
+      <!-- <ion-icon slot="start" name="trash-outline"></ion-icon> &nbsp; -->
+      Limpiar
+    </div> &nbsp;
+    
+    <div disabled class=" cargarImg" (click)="savePad()">
+      <input type="file" name="file-1" id="file-1" class="inputfile inputfile-1" data-multiple-caption="{count} archivos seleccionados" multiple />
+      <label for="file-1">
+      <span class="iborrainputfile">Cargar firma</span>
+      </label>
+    </div>
+  </div>
+
+</div>
+  <!-- mostrar firma  -->
+<!-- <div class="imgFirma">
+  <img src='{{ signatureImg }}' />
+  <br>
+  <div class="btnSave ion-text-center" >
+    <ion-button (click)="onClick()" shape="outline" #saveSignature >
+      Gurardar firma
+    </ion-button>
+  </div>
+</div> -->
+
+</div>

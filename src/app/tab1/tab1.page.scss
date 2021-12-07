@@ -1,0 +1,134 @@
+$movile: 400px;
+
+.foto{width:100%;height:auto;
+  max-width:$movile;
+  margin: 0 auto;
+  padding:.1px;
+  text-align: center;
+  h3{padding: 0;margin: 0;}
+  img{width:100%;height:auto;
+    max-height: 30px;}
+  transition:all .2s ease;;
+  &:active{background:#dfdedf;
+    box-shadow:0 0 8px 3px rgba(0,0,0,.3);;}
+}
+
+.firma{width:100%;height:auto;}
+
+.btnsFirma{width:100%;height:auto;  
+  max-width: 320px;
+  margin: 0 auto;
+  display:flex;
+  padding:.5rem;
+  overflow: hidden;
+  outline: none
+}
+
+.uploadFirma{width: 160px;height: 40px;
+  overflow: hidden;  
+  position: relative;
+  margin: 0 auto;
+  border:1px solid var(--copo);
+  color: var(--copo);
+  border-radius: 40px;
+  font-size: 14px;
+  text-transform: none;
+  display:flex;align-items:center;
+  justify-content:center;
+  cursor: pointer;
+  transition:all .1s ease;;
+  background: #fefefe;
+  
+}
+.btnUpload{width:252px;height:260px;
+  overflow: hidden;  
+  position: relative;
+  border: none;
+
+}
+
+.imgFirma{width:100%;height:auto;
+  max-width: 350px;
+  margin: 0 auto;
+  img{width:100%;height:auto;
+    object-fit: cover;}
+}
+.canvas{width:100%;height:auto;
+  position: relative;;
+  display:flex;align-items:center;
+  justify-content:center;
+}
+.firmaimg{width:100%;height:auto;
+  max-width:300px;
+  max-height:150px;
+  margin:0 auto;
+  overflow: hidden;
+  position: absolute;
+  padding:.2rem;
+  z-index:9999999;
+  border-radius: 6px;
+  img{width:auto;height:100%;
+    max-height:150px;
+    object-fit: cover;}
+}
+canvas {
+  display: block;
+  margin: 0 auto;
+  border: 2px dashed #4A4A4A;
+  border-radius: 6px;
+}
+
+// input[type="file"] {
+//   display: none;
+// }
+
+
+/* =========================================
+************  Page  
+========================================= */
+
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.inputfile + label {
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  padding: 0.625rem 1.25rem;
+}
+
+
+.iborrainputfile {
+font-size:14px; 
+font-weight:normal;
+}
+
+
+.inputfile-1 + label {
+  width: 160px;height: 40px;
+  overflow: hidden;  
+  position: relative;
+  margin: 0 auto;
+  border:1px solid var(--copo);
+  color: var(--copo);
+  border-radius: 40px;
+  font-size: 14px;
+  text-transform: none;
+  display:flex;align-items:center;
+  justify-content:center;
+  cursor: pointer;
+  transition:all .1s ease;;
+  background: #fefefe;
+  &:active{transform:scale(.95) translateY(1px);
+    box-shadow:0 0 8px 3px rgba(0,0,0,.5) inset;}
+}
